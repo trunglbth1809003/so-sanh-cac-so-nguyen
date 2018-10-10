@@ -1,30 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+int a[10];
 
-int arraynumber[10];
-int max;
-int min;
-
-int main() {
-    for (int i = 0; i < 10; ++i) {
-
-        printf("nhap cac phan tu trong mang so nguyen:\n", i + 1);
-        scanf("%d", &arraynumber[i]);
+int main()
+{
+    int i, n, max, min, j;
+    for (i = 0; i < 10; i++)
+    {
+        printf("nhap phan tu thu %d: ", i + 1);
+        scanf("%d", &a[i]);
     }
-    max = arraynumber[0];
-    min = arraynumber[0];
-    for (int j = 0; j < 10; ++j) {
-
+    max = a[10]; min = a[0];
+    for (j = 1; j < 10; j++)
+    {
+        if (min > a[j])min = a[j];
+        if (max < a[j])max = a[j];
     }
-    if (min > arraynumber[10]);
-        min = arraynumber[10];
     printf("phan tu nho nhat la: %d\n", min);
-
-    if (max < arraynumber[10]);
-        max = arraynumber[10];
     printf("phan tu lon nhat la: %d\n", max);
-
-
-
-return 0;
+    return 0;
 }
